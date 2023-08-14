@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
+export default function InputSummary (props) {
 
-const Rating = (props) => {
+  const onChangeTitle = (event) => {
+    props.setTitle(event.target.value);
+  };
+
   return (
     <CInputForm>
-      <CLabelDiv>예상 평점</CLabelDiv>
-      <CRating value={props.rating}/>
+      <CLabelDiv>웹툰 개요</CLabelDiv>
+      <CTitleInput onChange={onChangeTitle}/>
     </CInputForm>
   );
 };
@@ -26,13 +30,11 @@ const CLabelDiv = styled.div`
   margin : 10px;
 `;
 
-const CRating = styled.input`
+const CTitleInput = styled.input`
   width : 700px;
   height : 30px;
-  border : none;
+  border : 1px solid #000;
+  border-radius : 0.4rem;
   padding : 15px;
-  font-size : 25pt;
-  text-align : center;
+  font-size : 15pt;
 `;
-
-export default Rating;

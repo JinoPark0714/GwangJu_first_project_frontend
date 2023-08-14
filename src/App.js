@@ -1,8 +1,14 @@
-import ComponentWebtoonTotalPredict from "./components/ComponentWebtoonTotalPredict";
+import {InputFormForRating, ResultPredictionRating} from "./components/organization"
+import { Route, Routes } from "react-router-dom";
+
 function App() {
   return (
     <div>
-      <ComponentWebtoonTotalPredict/>
+      <Routes>
+        <Route path="/result" element={<ResultPredictionRating/>}/>
+        <Route path="/" element={<InputFormForRating/>}/>
+      </Routes>
+      {/* <ComponentWebtoonTotalPredict/> */}
     </div>
   );
 }

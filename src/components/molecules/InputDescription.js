@@ -9,7 +9,7 @@ export default function InputDescription(props){
 
   return (
     <CInputForm>
-      <CLabelDiv>웹툰 줄거리</CLabelDiv>
+      <CLabelDiv>웹툰 소개글</CLabelDiv>
       <CTextArea onChange={onChangeDescription}/>
     </CInputForm>
   );

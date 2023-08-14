@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { InputDescription, InputTitle, Rating, SimilarList, InputPredict } from './molecules';
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -32,21 +31,8 @@ const ComponentWebtoonTotalPredict = () => {
   return (
     <CInner>
       <Cdiv>
-        <InputTitle title={title} setTitle={setTitle}/>
+        예측결과
       </Cdiv>
-      <Cdiv>
-        <InputDescription description={description} setDescription={setDescription}/>
-      </Cdiv>
-      <Cdiv>
-        <InputPredict onClickPredict={onClickPredict}/>
-      </Cdiv>
-      <Cdiv>
-        <Rating rating={rating}/>
-      </Cdiv>
-      <Cdiv>
-        <SimilarList similarWebtoons={similarWebtoons}/>
-      </Cdiv>
-
     </CInner>
   );
 };
